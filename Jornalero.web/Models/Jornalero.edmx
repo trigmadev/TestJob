@@ -1,0 +1,879 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbJornaleroModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblAdmin">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Name="AdminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CenterAdminId" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblAlert">
+          <Key>
+            <PropertyRef Name="AlertId" />
+          </Key>
+          <Property Name="AlertId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReportId" Type="int" />
+          <Property Name="Description" Type="text" />
+          <Property Name="Image" Type="varchar" MaxLength="200" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblArea">
+          <Key>
+            <PropertyRef Name="AreaId" />
+          </Key>
+          <Property Name="AreaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="Modifieddate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblBirthPlace">
+          <Key>
+            <PropertyRef Name="BirthPlaceID" />
+          </Key>
+          <Property Name="BirthPlaceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblInvitationCode">
+          <Key>
+            <PropertyRef Name="InvitationCodeId" />
+          </Key>
+          <Property Name="InvitationCodeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdminId" Type="int" Nullable="false" />
+          <Property Name="Code" Type="int" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblLabor">
+          <Key>
+            <PropertyRef Name="LaborId" />
+          </Key>
+          <Property Name="LaborId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WorkCenterID" Type="int" />
+          <Property Name="ProfessionId" Type="int" />
+          <Property Name="BirthPlaceId" Type="int" />
+          <Property Name="FIrstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="Age" Type="varchar" MaxLength="50" />
+          <Property Name="Gender" Type="int" />
+          <Property Name="ProfileCompleteness" Type="int" />
+          <Property Name="IsAgreed" Type="bit" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblProfession">
+          <Key>
+            <PropertyRef Name="ProfessionId" />
+          </Key>
+          <Property Name="ProfessionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblReport">
+          <Key>
+            <PropertyRef Name="ReportId" />
+          </Key>
+          <Property Name="ReportId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LaborId" Type="int" Nullable="false" />
+          <Property Name="WorkCenterId" Type="int" Nullable="false" />
+          <Property Name="StopId" Type="int" />
+          <Property Name="EmployerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LicenseAreaId" Type="int" />
+          <Property Name="LicenseNo" Type="int" />
+          <Property Name="VehicleTypeId" Type="int" />
+          <Property Name="WorkTypeId" Type="nvarchar" MaxLength="50" />
+          <Property Name="VehicleColor" Type="int" />
+          <Property Name="IsBreak" Type="bit" />
+          <Property Name="WorkedHours" Type="float" />
+          <Property Name="Amount" Type="float" Nullable="false" />
+          <Property Name="ReportCompleteness" Type="int" Nullable="false" />
+          <Property Name="Wages" Type="int" />
+          <Property Name="EmployerImage" Type="varchar" MaxLength="200" />
+          <Property Name="SiteImage" Type="varchar" MaxLength="200" />
+          <Property Name="Status" Type="int" />
+          <Property Name="SiteLatitude" Type="float" />
+          <Property Name="SiteLongitude" Type="float" />
+          <Property Name="IsReportSubmitted" Type="bit" Nullable="false" />
+          <Property Name="IsSendAlert" Type="bit" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblStop">
+          <Key>
+            <PropertyRef Name="StopId" />
+          </Key>
+          <Property Name="StopId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WorkCenterId" Type="int" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Address1" Type="text" />
+          <Property Name="Address2" Type="text" />
+          <Property Name="Longitude" Type="float" />
+          <Property Name="Latitude" Type="float" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSuperAdmin">
+          <Key>
+            <PropertyRef Name="SuperAdminId" />
+          </Key>
+          <Property Name="SuperAdminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmailId" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblVehicleType">
+          <Key>
+            <PropertyRef Name="VehicleTypeId" />
+          </Key>
+          <Property Name="VehicleTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblWorkCenter">
+          <Key>
+            <PropertyRef Name="WorkCenterId" />
+          </Key>
+          <Property Name="WorkCenterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdminId" Type="int" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="State" Type="varchar" MaxLength="50" />
+          <Property Name="Address1" Type="text" />
+          <Property Name="Address2" Type="text" />
+          <Property Name="Zip" Type="int" />
+          <Property Name="Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="Longitude" Type="float" />
+          <Property Name="Latitude" Type="float" />
+          <Property Name="IsDisplayEmail" Type="bit" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_InvitationCode_tblAdmin">
+          <End Role="tblAdmin" Type="Self.tblAdmin" Multiplicity="1" />
+          <End Role="tblInvitationCode" Type="Self.tblInvitationCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblAdmin">
+              <PropertyRef Name="AdminId" />
+            </Principal>
+            <Dependent Role="tblInvitationCode">
+              <PropertyRef Name="AdminId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblAdmin_tblWorkCenter">
+          <End Role="tblWorkCenter" Type="Self.tblWorkCenter" Multiplicity="1" />
+          <End Role="tblAdmin" Type="Self.tblAdmin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblWorkCenter">
+              <PropertyRef Name="WorkCenterId" />
+            </Principal>
+            <Dependent Role="tblAdmin">
+              <PropertyRef Name="CenterAdminId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblLabor_tblBirthPlace">
+          <End Role="tblBirthPlace" Type="Self.tblBirthPlace" Multiplicity="0..1" />
+          <End Role="tblLabor" Type="Self.tblLabor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblBirthPlace">
+              <PropertyRef Name="BirthPlaceID" />
+            </Principal>
+            <Dependent Role="tblLabor">
+              <PropertyRef Name="BirthPlaceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblLabor_tblProfession">
+          <End Role="tblProfession" Type="Self.tblProfession" Multiplicity="0..1" />
+          <End Role="tblLabor" Type="Self.tblLabor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblProfession">
+              <PropertyRef Name="ProfessionId" />
+            </Principal>
+            <Dependent Role="tblLabor">
+              <PropertyRef Name="ProfessionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblLabor_tblWorkCenter">
+          <End Role="tblWorkCenter" Type="Self.tblWorkCenter" Multiplicity="0..1" />
+          <End Role="tblLabor" Type="Self.tblLabor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblWorkCenter">
+              <PropertyRef Name="WorkCenterId" />
+            </Principal>
+            <Dependent Role="tblLabor">
+              <PropertyRef Name="WorkCenterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblReport_tblArea">
+          <End Role="tblArea" Type="Self.tblArea" Multiplicity="0..1" />
+          <End Role="tblReport" Type="Self.tblReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblArea">
+              <PropertyRef Name="AreaId" />
+            </Principal>
+            <Dependent Role="tblReport">
+              <PropertyRef Name="LicenseAreaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblReport_tblVehicleType">
+          <End Role="tblVehicleType" Type="Self.tblVehicleType" Multiplicity="0..1" />
+          <End Role="tblReport" Type="Self.tblReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblVehicleType">
+              <PropertyRef Name="VehicleTypeId" />
+            </Principal>
+            <Dependent Role="tblReport">
+              <PropertyRef Name="VehicleTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStop_tblWorkCenter">
+          <End Role="tblWorkCenter" Type="Self.tblWorkCenter" Multiplicity="0..1" />
+          <End Role="tblStop" Type="Self.tblStop" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblWorkCenter">
+              <PropertyRef Name="WorkCenterId" />
+            </Principal>
+            <Dependent Role="tblStop">
+              <PropertyRef Name="WorkCenterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbJornaleroModelStoreContainer">
+          <EntitySet Name="tblAdmin" EntityType="Self.tblAdmin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblAlert" EntityType="Self.tblAlert" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblArea" EntityType="Self.tblArea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblBirthPlace" EntityType="Self.tblBirthPlace" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblInvitationCode" EntityType="Self.tblInvitationCode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblLabor" EntityType="Self.tblLabor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblProfession" EntityType="Self.tblProfession" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblReport" EntityType="Self.tblReport" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblStop" EntityType="Self.tblStop" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblSuperAdmin" EntityType="Self.tblSuperAdmin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblVehicleType" EntityType="Self.tblVehicleType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblWorkCenter" EntityType="Self.tblWorkCenter" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_InvitationCode_tblAdmin" Association="Self.FK_InvitationCode_tblAdmin">
+            <End Role="tblAdmin" EntitySet="tblAdmin" />
+            <End Role="tblInvitationCode" EntitySet="tblInvitationCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblAdmin_tblWorkCenter" Association="Self.FK_tblAdmin_tblWorkCenter">
+            <End Role="tblWorkCenter" EntitySet="tblWorkCenter" />
+            <End Role="tblAdmin" EntitySet="tblAdmin" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblLabor_tblBirthPlace" Association="Self.FK_tblLabor_tblBirthPlace">
+            <End Role="tblBirthPlace" EntitySet="tblBirthPlace" />
+            <End Role="tblLabor" EntitySet="tblLabor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblLabor_tblProfession" Association="Self.FK_tblLabor_tblProfession">
+            <End Role="tblProfession" EntitySet="tblProfession" />
+            <End Role="tblLabor" EntitySet="tblLabor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblLabor_tblWorkCenter" Association="Self.FK_tblLabor_tblWorkCenter">
+            <End Role="tblWorkCenter" EntitySet="tblWorkCenter" />
+            <End Role="tblLabor" EntitySet="tblLabor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblReport_tblArea" Association="Self.FK_tblReport_tblArea">
+            <End Role="tblArea" EntitySet="tblArea" />
+            <End Role="tblReport" EntitySet="tblReport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblReport_tblVehicleType" Association="Self.FK_tblReport_tblVehicleType">
+            <End Role="tblVehicleType" EntitySet="tblVehicleType" />
+            <End Role="tblReport" EntitySet="tblReport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStop_tblWorkCenter" Association="Self.FK_tblStop_tblWorkCenter">
+            <End Role="tblWorkCenter" EntitySet="tblWorkCenter" />
+            <End Role="tblStop" EntitySet="tblStop" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbJornaleroModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblAdmin">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Name="AdminId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CenterAdminId" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tblInvitationCodes" Relationship="Self.FK_InvitationCode_tblAdmin" FromRole="tblAdmin" ToRole="tblInvitationCode" />
+          <NavigationProperty Name="tblWorkCenter" Relationship="Self.FK_tblAdmin_tblWorkCenter" FromRole="tblAdmin" ToRole="tblWorkCenter" />
+        </EntityType>
+        <EntityType Name="tblAlert">
+          <Key>
+            <PropertyRef Name="AlertId" />
+          </Key>
+          <Property Name="AlertId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReportId" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="tblArea">
+          <Key>
+            <PropertyRef Name="AreaId" />
+          </Key>
+          <Property Name="AreaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Modifieddate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tblReports" Relationship="Self.FK_tblReport_tblArea" FromRole="tblArea" ToRole="tblReport" />
+        </EntityType>
+        <EntityType Name="tblBirthPlace">
+          <Key>
+            <PropertyRef Name="BirthPlaceID" />
+          </Key>
+          <Property Name="BirthPlaceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tblLabors" Relationship="Self.FK_tblLabor_tblBirthPlace" FromRole="tblBirthPlace" ToRole="tblLabor" />
+        </EntityType>
+        <EntityType Name="tblInvitationCode">
+          <Key>
+            <PropertyRef Name="InvitationCodeId" />
+          </Key>
+          <Property Name="InvitationCodeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdminId" Type="Int32" Nullable="false" />
+          <Property Name="Code" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tblAdmin" Relationship="Self.FK_InvitationCode_tblAdmin" FromRole="tblInvitationCode" ToRole="tblAdmin" />
+        </EntityType>
+        <EntityType Name="tblLabor">
+          <Key>
+            <PropertyRef Name="LaborId" />
+          </Key>
+          <Property Name="LaborId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkCenterID" Type="Int32" />
+          <Property Name="ProfessionId" Type="Int32" />
+          <Property Name="BirthPlaceId" Type="Int32" />
+          <Property Name="FIrstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="Int32" />
+          <Property Name="ProfileCompleteness" Type="Int32" />
+          <Property Name="IsAgreed" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tblBirthPlace" Relationship="Self.FK_tblLabor_tblBirthPlace" FromRole="tblLabor" ToRole="tblBirthPlace" />
+          <NavigationProperty Name="tblProfession" Relationship="Self.FK_tblLabor_tblProfession" FromRole="tblLabor" ToRole="tblProfession" />
+          <NavigationProperty Name="tblWorkCenter" Relationship="Self.FK_tblLabor_tblWorkCenter" FromRole="tblLabor" ToRole="tblWorkCenter" />
+        </EntityType>
+        <EntityType Name="tblProfession">
+          <Key>
+            <PropertyRef Name="ProfessionId" />
+          </Key>
+          <Property Name="ProfessionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tblLabors" Relationship="Self.FK_tblLabor_tblProfession" FromRole="tblProfession" ToRole="tblLabor" />
+        </EntityType>
+        <EntityType Name="tblReport">
+          <Key>
+            <PropertyRef Name="ReportId" />
+          </Key>
+          <Property Name="ReportId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LaborId" Type="Int32" Nullable="false" />
+          <Property Name="WorkCenterId" Type="Int32" Nullable="false" />
+          <Property Name="StopId" Type="Int32" />
+          <Property Name="EmployerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LicenseAreaId" Type="Int32" />
+          <Property Name="LicenseNo" Type="Int32" />
+          <Property Name="VehicleTypeId" Type="Int32" />
+          <Property Name="WorkTypeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VehicleColor" Type="Int32" />
+          <Property Name="IsBreak" Type="Boolean" />
+          <Property Name="WorkedHours" Type="Double" />
+          <Property Name="Amount" Type="Double" Nullable="false" />
+          <Property Name="ReportCompleteness" Type="Int32" Nullable="false" />
+          <Property Name="Wages" Type="Int32" />
+          <Property Name="EmployerImage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SiteImage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="SiteLatitude" Type="Double" />
+          <Property Name="SiteLongitude" Type="Double" />
+          <Property Name="IsReportSubmitted" Type="Boolean" Nullable="false" />
+          <Property Name="IsSendAlert" Type="Boolean" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tblArea" Relationship="Self.FK_tblReport_tblArea" FromRole="tblReport" ToRole="tblArea" />
+          <NavigationProperty Name="tblVehicleType" Relationship="Self.FK_tblReport_tblVehicleType" FromRole="tblReport" ToRole="tblVehicleType" />
+        </EntityType>
+        <EntityType Name="tblStop">
+          <Key>
+            <PropertyRef Name="StopId" />
+          </Key>
+          <Property Name="StopId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkCenterId" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Address2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Longitude" Type="Double" />
+          <Property Name="Latitude" Type="Double" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tblWorkCenter" Relationship="Self.FK_tblStop_tblWorkCenter" FromRole="tblStop" ToRole="tblWorkCenter" />
+        </EntityType>
+        <EntityType Name="tblSuperAdmin">
+          <Key>
+            <PropertyRef Name="SuperAdminId" />
+          </Key>
+          <Property Name="SuperAdminId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblVehicleType">
+          <Key>
+            <PropertyRef Name="VehicleTypeId" />
+          </Key>
+          <Property Name="VehicleTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tblReports" Relationship="Self.FK_tblReport_tblVehicleType" FromRole="tblVehicleType" ToRole="tblReport" />
+        </EntityType>
+        <EntityType Name="tblWorkCenter">
+          <Key>
+            <PropertyRef Name="WorkCenterId" />
+          </Key>
+          <Property Name="WorkCenterId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdminId" Type="Int32" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Address2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Zip" Type="Int32" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Longitude" Type="Double" />
+          <Property Name="Latitude" Type="Double" />
+          <Property Name="IsDisplayEmail" Type="Boolean" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tblAdmins" Relationship="Self.FK_tblAdmin_tblWorkCenter" FromRole="tblWorkCenter" ToRole="tblAdmin" />
+          <NavigationProperty Name="tblLabors" Relationship="Self.FK_tblLabor_tblWorkCenter" FromRole="tblWorkCenter" ToRole="tblLabor" />
+          <NavigationProperty Name="tblStops" Relationship="Self.FK_tblStop_tblWorkCenter" FromRole="tblWorkCenter" ToRole="tblStop" />
+        </EntityType>
+        <Association Name="FK_InvitationCode_tblAdmin">
+          <End Role="tblAdmin" Type="Self.tblAdmin" Multiplicity="1" />
+          <End Role="tblInvitationCode" Type="Self.tblInvitationCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblAdmin">
+              <PropertyRef Name="AdminId" />
+            </Principal>
+            <Dependent Role="tblInvitationCode">
+              <PropertyRef Name="AdminId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblAdmin_tblWorkCenter">
+          <End Role="tblWorkCenter" Type="Self.tblWorkCenter" Multiplicity="1" />
+          <End Role="tblAdmin" Type="Self.tblAdmin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblWorkCenter">
+              <PropertyRef Name="WorkCenterId" />
+            </Principal>
+            <Dependent Role="tblAdmin">
+              <PropertyRef Name="CenterAdminId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblReport_tblArea">
+          <End Role="tblArea" Type="Self.tblArea" Multiplicity="0..1" />
+          <End Role="tblReport" Type="Self.tblReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblArea">
+              <PropertyRef Name="AreaId" />
+            </Principal>
+            <Dependent Role="tblReport">
+              <PropertyRef Name="LicenseAreaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblLabor_tblBirthPlace">
+          <End Role="tblBirthPlace" Type="Self.tblBirthPlace" Multiplicity="0..1" />
+          <End Role="tblLabor" Type="Self.tblLabor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblBirthPlace">
+              <PropertyRef Name="BirthPlaceID" />
+            </Principal>
+            <Dependent Role="tblLabor">
+              <PropertyRef Name="BirthPlaceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblLabor_tblProfession">
+          <End Role="tblProfession" Type="Self.tblProfession" Multiplicity="0..1" />
+          <End Role="tblLabor" Type="Self.tblLabor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblProfession">
+              <PropertyRef Name="ProfessionId" />
+            </Principal>
+            <Dependent Role="tblLabor">
+              <PropertyRef Name="ProfessionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblLabor_tblWorkCenter">
+          <End Role="tblWorkCenter" Type="Self.tblWorkCenter" Multiplicity="0..1" />
+          <End Role="tblLabor" Type="Self.tblLabor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblWorkCenter">
+              <PropertyRef Name="WorkCenterId" />
+            </Principal>
+            <Dependent Role="tblLabor">
+              <PropertyRef Name="WorkCenterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblReport_tblVehicleType">
+          <End Role="tblVehicleType" Type="Self.tblVehicleType" Multiplicity="0..1" />
+          <End Role="tblReport" Type="Self.tblReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblVehicleType">
+              <PropertyRef Name="VehicleTypeId" />
+            </Principal>
+            <Dependent Role="tblReport">
+              <PropertyRef Name="VehicleTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStop_tblWorkCenter">
+          <End Role="tblWorkCenter" Type="Self.tblWorkCenter" Multiplicity="0..1" />
+          <End Role="tblStop" Type="Self.tblStop" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblWorkCenter">
+              <PropertyRef Name="WorkCenterId" />
+            </Principal>
+            <Dependent Role="tblStop">
+              <PropertyRef Name="WorkCenterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbJornaleroEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblAdmins" EntityType="Self.tblAdmin" />
+          <EntitySet Name="tblAlerts" EntityType="Self.tblAlert" />
+          <EntitySet Name="tblAreas" EntityType="Self.tblArea" />
+          <EntitySet Name="tblBirthPlaces" EntityType="Self.tblBirthPlace" />
+          <EntitySet Name="tblInvitationCodes" EntityType="Self.tblInvitationCode" />
+          <EntitySet Name="tblLabors" EntityType="Self.tblLabor" />
+          <EntitySet Name="tblProfessions" EntityType="Self.tblProfession" />
+          <EntitySet Name="tblReports" EntityType="Self.tblReport" />
+          <EntitySet Name="tblStops" EntityType="Self.tblStop" />
+          <EntitySet Name="tblSuperAdmins" EntityType="Self.tblSuperAdmin" />
+          <EntitySet Name="tblVehicleTypes" EntityType="Self.tblVehicleType" />
+          <EntitySet Name="tblWorkCenters" EntityType="Self.tblWorkCenter" />
+          <AssociationSet Name="FK_InvitationCode_tblAdmin" Association="Self.FK_InvitationCode_tblAdmin">
+            <End Role="tblAdmin" EntitySet="tblAdmins" />
+            <End Role="tblInvitationCode" EntitySet="tblInvitationCodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblAdmin_tblWorkCenter" Association="Self.FK_tblAdmin_tblWorkCenter">
+            <End Role="tblWorkCenter" EntitySet="tblWorkCenters" />
+            <End Role="tblAdmin" EntitySet="tblAdmins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblReport_tblArea" Association="Self.FK_tblReport_tblArea">
+            <End Role="tblArea" EntitySet="tblAreas" />
+            <End Role="tblReport" EntitySet="tblReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblLabor_tblBirthPlace" Association="Self.FK_tblLabor_tblBirthPlace">
+            <End Role="tblBirthPlace" EntitySet="tblBirthPlaces" />
+            <End Role="tblLabor" EntitySet="tblLabors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblLabor_tblProfession" Association="Self.FK_tblLabor_tblProfession">
+            <End Role="tblProfession" EntitySet="tblProfessions" />
+            <End Role="tblLabor" EntitySet="tblLabors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblLabor_tblWorkCenter" Association="Self.FK_tblLabor_tblWorkCenter">
+            <End Role="tblWorkCenter" EntitySet="tblWorkCenters" />
+            <End Role="tblLabor" EntitySet="tblLabors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblReport_tblVehicleType" Association="Self.FK_tblReport_tblVehicleType">
+            <End Role="tblVehicleType" EntitySet="tblVehicleTypes" />
+            <End Role="tblReport" EntitySet="tblReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStop_tblWorkCenter" Association="Self.FK_tblStop_tblWorkCenter">
+            <End Role="tblWorkCenter" EntitySet="tblWorkCenters" />
+            <End Role="tblStop" EntitySet="tblStops" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbJornaleroModelStoreContainer" CdmEntityContainer="dbJornaleroEntities">
+          <EntitySetMapping Name="tblAdmins">
+            <EntityTypeMapping TypeName="dbJornaleroModel.tblAdmin">
+              <MappingFragment StoreEntitySet="tblAdmin">
+                <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+                <ScalarProperty Name="CenterAdminId" ColumnName="CenterAdminId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAlerts">
+            <EntityTypeMapping TypeName="dbJornaleroModel.tblAlert">
+              <MappingFragment StoreEntitySet="tblAlert">
+                <ScalarProperty Name="AlertId" ColumnName="AlertId" />
+                <ScalarProperty Name="ReportId" ColumnName="ReportId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAreas">
+            <EntityTypeMapping TypeName="dbJornaleroModel.tblArea">
+              <MappingFragment StoreEntitySet="tblArea">
+                <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Modifieddate" ColumnName="Modifieddate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblBirthPlaces">
+            <EntityTypeMapping TypeName="dbJornaleroModel.tblBirthPlace">
+              <MappingFragment StoreEntitySet="tblBirthPlace">
+                <ScalarProperty Name="BirthPlaceID" ColumnName="BirthPlaceID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblInvitationCodes">
+            <EntityTypeMapping TypeName="dbJornaleroModel.tblInvitationCode">
+              <MappingFragment StoreEntitySet="tblInvitationCode">
+                <ScalarProperty Name="InvitationCodeId" ColumnName="InvitationCodeId" />
+                <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblLabors">
+            <EntityTypeMapping TypeName="dbJornaleroModel.tblLabor">
+              <MappingFragment StoreEntitySet="tblLabor">
+                <ScalarProperty Name="LaborId" ColumnName="LaborId" />
+                <ScalarProperty Name="WorkCenterID" ColumnName="WorkCenterID" />
+                <ScalarProperty Name="ProfessionId" ColumnName="ProfessionId" />
+                <ScalarProperty Name="BirthPlaceId" ColumnName="BirthPlaceId" />
+                <ScalarProperty Name="FIrstName" ColumnName="FIrstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="ProfileCompleteness" ColumnName="ProfileCompleteness" />
+                <ScalarProperty Name="IsAgreed" ColumnName="IsAgreed" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblProfessions">
+            <EntityTypeMapping TypeName="dbJornaleroModel.tblProfession">
+              <MappingFragment StoreEntitySet="tblProfession">
+                <ScalarProperty Name="ProfessionId" ColumnName="ProfessionId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblReports">
+            <EntityTypeMapping TypeName="dbJornaleroModel.tblReport">
+              <MappingFragment StoreEntitySet="tblReport">
+                <ScalarProperty Name="ReportId" ColumnName="ReportId" />
+                <ScalarProperty Name="LaborId" ColumnName="LaborId" />
+                <ScalarProperty Name="WorkCenterId" ColumnName="WorkCenterId" />
+                <ScalarProperty Name="StopId" ColumnName="StopId" />
+                <ScalarProperty Name="EmployerName" ColumnName="EmployerName" />
+                <ScalarProperty Name="LicenseAreaId" ColumnName="LicenseAreaId" />
+                <ScalarProperty Name="LicenseNo" ColumnName="LicenseNo" />
+                <ScalarProperty Name="VehicleTypeId" ColumnName="VehicleTypeId" />
+                <ScalarProperty Name="WorkTypeId" ColumnName="WorkTypeId" />
+                <ScalarProperty Name="VehicleColor" ColumnName="VehicleColor" />
+                <ScalarProperty Name="IsBreak" ColumnName="IsBreak" />
+                <ScalarProperty Name="WorkedHours" ColumnName="WorkedHours" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="ReportCompleteness" ColumnName="ReportCompleteness" />
+                <ScalarProperty Name="Wages" ColumnName="Wages" />
+                <ScalarProperty Name="EmployerImage" ColumnName="EmployerImage" />
+                <ScalarProperty Name="SiteImage" ColumnName="SiteImage" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="SiteLatitude" ColumnName="SiteLatitude" />
+                <ScalarProperty Name="SiteLongitude" ColumnName="SiteLongitude" />
+                <ScalarProperty Name="IsReportSubmitted" ColumnName="IsReportSubmitted" />
+                <ScalarProperty Name="IsSendAlert" ColumnName="IsSendAlert" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStops">
+            <EntityTypeMapping TypeName="dbJornaleroModel.tblStop">
+              <MappingFragment StoreEntitySet="tblStop">
+                <ScalarProperty Name="StopId" ColumnName="StopId" />
+                <ScalarProperty Name="WorkCenterId" ColumnName="WorkCenterId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSuperAdmins">
+            <EntityTypeMapping TypeName="dbJornaleroModel.tblSuperAdmin">
+              <MappingFragment StoreEntitySet="tblSuperAdmin">
+                <ScalarProperty Name="SuperAdminId" ColumnName="SuperAdminId" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblVehicleTypes">
+            <EntityTypeMapping TypeName="dbJornaleroModel.tblVehicleType">
+              <MappingFragment StoreEntitySet="tblVehicleType">
+                <ScalarProperty Name="VehicleTypeId" ColumnName="VehicleTypeId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblWorkCenters">
+            <EntityTypeMapping TypeName="dbJornaleroModel.tblWorkCenter">
+              <MappingFragment StoreEntitySet="tblWorkCenter">
+                <ScalarProperty Name="WorkCenterId" ColumnName="WorkCenterId" />
+                <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="IsDisplayEmail" ColumnName="IsDisplayEmail" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

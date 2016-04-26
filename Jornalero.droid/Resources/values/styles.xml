@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--	<style name="JornaleroTheme" parent="@android:style/Theme.Translucent.NoTitleBar">
+	</style>-->
+	<style name="JornaleroTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowBackground">@color/transparent</item>
+	</style>
+</resources>

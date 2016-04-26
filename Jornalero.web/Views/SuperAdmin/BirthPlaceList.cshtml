@@ -1,0 +1,130 @@
+﻿@model List<Jornalero.web.Models.tblBirthPlace>
+
+@{
+    ViewBag.Title = "Area List";
+    Layout = "~/Views/Shared/_LayOutSuperAdmin.cshtml";
+}
+<html>
+<head>
+    <title>Area List</title>
+</head>
+<body>
+
+    <div class="content-wrapper">
+
+        <div class="row">
+
+            <div class="col-lg-6">
+                <!-- START panel-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">Area List</div>
+                    <div class="panel-body">
+                        <!-- START table-responsive-->
+                        <div class="table-responsive">
+                            <table class="table" id="dtArea">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Birth Place</th>
+                                        <th>Creation Date</th>
+                                        <th>Updation Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tBody">
+
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+
+                                            <td>#</td>
+                                            <td>@item.Name</td>
+                                            <td>@item.CreatedDate</td>
+                                            <td>@item.ModifiedDate</td>
+                                            <td>
+                                                <a class="edit" href="~/SuperAdmin/EditBirthPlace/?BirthPlaceId=@item.BirthPlaceID" data-key="@item.BirthPlaceID'" style="cursor:pointer" title="edit" />Edit
+                                                <a class="delete" onclick="DeleteProfession(this);" data-key="@item.BirthPlaceID" style="cursor:pointer" title="delete" />Delete
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- END table-responsive-->
+                    </div>
+                </div>
+                <!-- END panel-->
+            </div>
+        </div>
+
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            //Data Table
+
+
+
+            //Delete Profession
+
+
+
+
+
+
+
+        });
+        function DeleteProfession(e) {
+
+            if (confirm('Are You Sure you want to delete this'))
+            {
+
+                var AreaId = $(e).data('key');
+
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("DeleteBirthPlace", "SuperAdmin")',
+                    data: JSON.stringify({ AreaId: AreaId }),
+                    dataType: "json",
+                    traditional: true,
+                    contentType: 'application/json',
+                    success: function (result) {
+
+                        if (result == "Success")
+                        {
+
+                            alert('Records Deleted Sucessfully');
+                            window.location.reload;
+                        }
+                        else if (result == "Error") {
+                            alert('Error occured. Please try again');
+
+                        }
+                        else if (result == "Failure") {
+                            alert('Something Going Wrong While Deleting your Records');
+
+                        }
+                    },
+                    error: function (err, result) {
+                        alert('Error occured. Please try again');
+                    }
+                });
+            }
+
+        }
+    </script>
+
+</body>
+
+
+
+
+
+</html>
+
+
+

@@ -1,0 +1,63 @@
+﻿@model Jornalero.web.Models.tblProfession
+
+@{
+    Layout = "~/Views/Shared/_LayOutSuperAdmin.cshtml"; ;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Profession</title>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content-wrapper">
+            <h3>
+                Add Profession
+            </h3>
+
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <!-- START panel-->
+                    <div class="panel panel-default">
+
+                        <div class="panel-body">
+                            <form method="post" action="~/SuperAdmin/AddProfession">
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">Profession Name</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" id="Name" name="Name" placeholder="Profession Name" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-lg-offset-2 col-lg-10">
+                                        <button type="submit" class="btn btn-sm btn-default">Add Profession</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    @if (!string.IsNullOrEmpty(ViewBag.Message))
+    {
+
+
+        <script>
+
+            alert('@ViewBag.Message');
+
+        </script>
+
+    }
+
+</body>
+</html>

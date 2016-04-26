@@ -1,0 +1,26 @@
+﻿<Properties StartupItem="Jornalero.droid\Jornalero.droid.csproj" RefactoringSettings.EnableRefactorings="True">
+  <DisabledProjects>
+    <String>Jornalero/Jornalero.csproj</String>
+    <String>Jornalero.web/Jornalero.web.csproj</String>
+    <String>Jornalero.web\Jornalero.web.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.AVD_GalaxyNexus_ToolsForApacheCordova" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="Jornalero.droid\Fragment\CreateAlertFragment.cs" Line="65" Column="47" />
+      <File FileName="Jornalero.droid\Fragment\MyProfilesFragment.cs" Line="52" Column="6" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/preeti/Documents/Neha/Charles/Backup/Jornalero_15 March/Jornalero.Library/Service/ServiceHandler.cs" line="50" column="1" />
+      <Breakpoint file="E:\Manish\Charles\Working\Jornalero.Library\Service\ServiceHandler.cs" line="52" column="1" />
+      <Breakpoint file="E:\Manish\Charles\Working\Jornalero.droid\Activity\SplashActivity.cs" line="50" column="1" />
+      <Breakpoint file="E:\Manish\Charles\Working\Jornalero.Core\Contract\ServiceHandler.cs" line="24" column="1" />
+      <Breakpoint file="C:\Users\Manish kumar\AppData\Local\Temp\__layoutFile" line="11759" column="1" />
+      <Breakpoint file="E:\Manish\Charles\Working\jornalero\Jornalero.droid\Activity\ChangeWorkCenterActivity.cs" line="177" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Jornalero.droid AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="Theme.DeviceDefault.Dialog.NoActionBar" />
+</Properties>

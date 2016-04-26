@@ -1,0 +1,841 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{3A2FD96A-8FDF-451D-850F-304DA193FD94}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Jornalero.droid</RootNamespace>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AssemblyName>Jornalero.droid</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GCM.Client">
+      <HintPath>..\Components\GCMClient-1.0\lib\android\GCM.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Windows.Core">
+      <HintPath>..\packages\PInvoke.Windows.Core.0.3.2\lib\portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Kernel32">
+      <HintPath>..\packages\PInvoke.Kernel32.0.3.2\lib\portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Validation">
+      <HintPath>..\packages\Validation.2.2.8\lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.BCrypt">
+      <HintPath>..\packages\PInvoke.BCrypt.0.3.2\lib\portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.BCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.NCrypt">
+      <HintPath>..\packages\PInvoke.NCrypt.0.3.2\lib\portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.NCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLCrypto">
+      <HintPath>..\packages\PCLCrypto.2.0.147\lib\MonoAndroid23\PCLCrypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Basement">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.1\lib\MonoAndroid41\Xamarin.GooglePlayServices.Basement.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Base">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Base.29.0.0.1\lib\MonoAndroid41\Xamarin.GooglePlayServices.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Maps">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Maps.29.0.0.1\lib\MonoAndroid41\Xamarin.GooglePlayServices.Maps.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Activity\MainActivity.cs" />
+    <Compile Include="Activity\SplashActivity.cs" />
+    <Compile Include="Helper\ControllerHelper.cs" />
+    <Compile Include="Helper\GcmService.cs" />
+    <Compile Include="Activity\BaseActivity.cs" />
+    <Compile Include="Activity\HomeActivity.cs" />
+    <Compile Include="Fragment\TestFragment.cs" />
+    <Compile Include="Activity\SignInActivity.cs" />
+    <Compile Include="Activity\SignUpActivity.cs" />
+    <Compile Include="Control\JornaleroButton.cs" />
+    <Compile Include="Control\JornaleroEditText.cs" />
+    <Compile Include="Control\JornaleroTextView.cs" />
+    <Compile Include="Activity\ForgotPwdActivity.cs" />
+    <Compile Include="Fragment\MyProfilesFragment.cs" />
+    <Compile Include="Activity\PersonalInfoActivity.cs" />
+    <Compile Include="Activity\ChangeEmailActivity.cs" />
+    <Compile Include="Activity\ChangePasswordActivity.cs" />
+    <Compile Include="Activity\TestActivity.cs" />
+    <Compile Include="JornaleroApp.cs" />
+    <Compile Include="LocationService\LocationService.cs" />
+    <Compile Include="LocationService\LocationServiceBinder.cs" />
+    <Compile Include="LocationService\LocationServiceConnection.cs" />
+    <Compile Include="Activity\ChangeWorkCenterActivity.cs" />
+    <Compile Include="Adapter\MarkerInfo.cs" />
+    <Compile Include="Fragment\CreateAlertFragment.cs" />
+    <Compile Include="Fragment\AddVehicleFragment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\xml\thumb_drawable.xml" />
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\layout\Home.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\color.xml" />
+    <AndroidResource Include="Resources\anim\slide_in_left.xml" />
+    <AndroidResource Include="Resources\anim\slide_in_right.xml" />
+    <AndroidResource Include="Resources\anim\slide_out_left.xml" />
+    <AndroidResource Include="Resources\anim\slide_out_right.xml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\dimen.xml" />
+    <AndroidResource Include="Resources\layout\Splash.axml" />
+    <AndroidResource Include="Resources\layout\SignIn.axml" />
+    <AndroidResource Include="Resources\drawable\round_button.xml" />
+    <AndroidResource Include="Resources\xml\progress_drawable.xml" />
+    <AndroidResource Include="Resources\layout\SignUp.axml" />
+    <AndroidResource Include="Resources\layout\PopupDialog.axml" />
+    <AndroidResource Include="Resources\layout\nav_drawer.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\forward_errow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_bg_2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\drop_down_arrow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\drop_down_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\input_box.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\location.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\logo_1.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\main_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\passwod_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\signin_brn.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\signup_btn.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\splash.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\type_here.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\view.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\view_tab.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_bg_2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\drop_down_arrow.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\drop_down_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\input_box.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\location.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\logo_1.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\main_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\passwod_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\signin_brn.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\signup_btn.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\splash.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\type_here.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\view.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\view_tab.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_bg_2.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\drop_down_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\drop_down_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\input_box.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\location.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\logo_1.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\main_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\passwod_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\signin_brn.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\signup_btn.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\splash.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\type_here.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\view.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\view_tab.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_bg_2.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\drop_down_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\drop_down_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\input_box.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\location.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\logo_1.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\main_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\passwod_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\signin_brn.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\signup_btn.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\splash.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\type_here.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\view.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\view_tab.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\btn_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\btn_bg_2.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\drop_down_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\drop_down_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\input_box.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\location.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\logo_1.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\main_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\passwod_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\signin_brn.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\signup_btn.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\splash.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\type_here.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\view.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\view_tab.png" />
+    <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\layout\ForgotPwd.axml" />
+    <AndroidResource Include="Resources\drawable\trasparent_bg_button.xml" />
+    <AndroidResource Include="Resources\values\attrs.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\type_here_temp.png" />
+    <AndroidResource Include="Resources\drawable\round_edittext.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\type_here_temp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\type_here_temp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\type_here_temp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\type_here_temp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\alert_bar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\alert_bar_button.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\alert_bar_fill.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\alert_divider.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\alert_feed.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\alert_feed_notification.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\clear.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\clear_unselected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cross_with_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\distance_bar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\distance_bar_button.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\distance_divider.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\doller_img.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\job_log.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\lock_img.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\logout.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\my_alert.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\my_profile.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\no_filter.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\profile_percent.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\report.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\show_result.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\show_result_unselected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\star.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\truck.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\worker_right.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\alert_bar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\alert_bar_button.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\alert_bar_fill.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\alert_divider.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\alert_feed.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\alert_feed_notification.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\clear.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\clear_unselected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\cross_with_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\distance_bar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\distance_bar_button.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\distance_divider.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\doller_img.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\forward_errow.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\job_log.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\lock_img.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\logout.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\my_alert.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\my_profile.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\no_filter.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\profile_percent.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\report.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\show_result.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\show_result_unselected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\star.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\truck.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\worker_right.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\alert_bar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\alert_bar_button.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\alert_bar_fill.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\alert_divider.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\alert_feed.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\alert_feed_notification.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\clear.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\clear_unselected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cross_with_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\distance_bar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\distance_bar_button.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\distance_divider.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\doller_img.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\forward_errow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\job_log.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\lock_img.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\logout.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\my_alert.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\my_profile.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\no_filter.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\profile_percent.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\report.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\show_result.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\show_result_unselected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\star.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\truck.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\worker_right.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\alert_bar.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\alert_bar_button.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\alert_bar_fill.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\alert_divider.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\alert_feed.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\alert_feed_notification.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\clear.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\clear_unselected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cross_with_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\distance_bar.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\distance_bar_button.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\distance_divider.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\doller_img.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\forward_errow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\job_log.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\lock_img.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\logout.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\my_alert.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\my_profile.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\no_filter.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\profile_percent.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\report.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\show_result.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\show_result_unselected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\star.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\truck.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\worker_right.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\alert_bar.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\alert_bar_button.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\alert_bar_fill.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\alert_divider.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\alert_feed.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\alert_feed_notification.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\clear.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\clear_unselected.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\cross_with_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\distance_bar.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\distance_bar_button.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\distance_divider.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\doller_img.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\forward_errow.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\job_log.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\lock_img.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\logout.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\my_alert.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\my_profile.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\no_filter.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\profile_percent.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\report.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\show_result.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\show_result_unselected.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\star.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\truck.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\worker_right.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_outline.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\delete.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\edit.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\filter.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\main_img.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_outline.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\delete.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\edit.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\filter.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\main_img.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_outline.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\delete.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\edit.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\filter.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\main_img.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_outline.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\delete.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\edit.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\filter.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\main_img.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\btn_outline.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\delete.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\edit.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\filter.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\main_img.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\menu.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\active.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\in_active.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\active.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\in_active.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\active.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\in_active.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\active.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\in_active.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\active.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\in_active.png" />
+    <AndroidResource Include="Resources\layout\Test.axml" />
+    <AndroidResource Include="Resources\layout\MyProfiles.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\email.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\list_errow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\listing_divider.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\nav.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\notification_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\password.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\percent_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\personal_info.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\phone.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\work_center.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\email.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\list_errow.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\listing_divider.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\nav.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\notification_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\password.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\percent_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\personal_info.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\phone.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\work_center.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\email.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\list_errow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\listing_divider.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\nav.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\notification_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\password.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\percent_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\personal_info.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\phone.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\work_center.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\email.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\list_errow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\listing_divider.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\nav.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\notification_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\password.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\percent_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\personal_info.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\phone.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\work_center.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\email.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\list_errow.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\listing_divider.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\nav.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\notification_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\password.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\percent_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\personal_info.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\phone.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\work_center.png" />
+    <AndroidResource Include="Resources\layout\PersonalInfo.axml" />
+    <AndroidResource Include="Resources\layout\ToolbarBack.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\back_button_arrow.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\back_button_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\back_button_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\back_button_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\back_button_arrow.png" />
+    <AndroidResource Include="Resources\layout\ChangeEmail.axml" />
+    <AndroidResource Include="Resources\layout\ChangePassword.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\back.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\back.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\back.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\back.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\back.png" />
+    <AndroidResource Include="Resources\layout\TopAlertView.axml" />
+    <AndroidResource Include="Resources\layout\BottomTabView.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\alert.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cancel.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\checkin.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\divider.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dropdown.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\save.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\report_tab.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\alert.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\bottom_tab.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\cancel.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\checkin.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\divider.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dropdown.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\report_tab.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\save.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\alert.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\bottom_tab.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cancel.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\checkin.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\divider.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dropdown.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\report_tab.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\save.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\alert.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\bottom_tab.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cancel.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\checkin.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\divider.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dropdown.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\report_tab.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\save.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\alert.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\bottom_tab.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\cancel.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\checkin.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\divider.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dropdown.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\report_tab.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\save.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_selected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_selected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_selected.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tab.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tab_selected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\attchment.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\close_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\nitification_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\attchment.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\close_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\nitification_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\attchment.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\close_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\nitification_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\attchment.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\close_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\nitification_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\attchment.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\close_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\nitification_bg.png" />
+    <AndroidResource Include="Resources\layout\TestItem.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\error_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\error_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\error_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\error_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\error_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\checkout.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cross.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\current_location.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dollor.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dollor_not_paid.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\map_pin.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_left_selected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_left_unselect.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_right_selected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_right_unselect.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\checkout.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\cross.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\current_location.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dollor.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dollor_not_paid.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\map_pin.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_left_selected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_left_unselect.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_right_selected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_right_unselect.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\checkout.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cross.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\current_location.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dollor.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dollor_not_paid.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\map_pin.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_left_selected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_left_unselect.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_right_selected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_right_unselect.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\checkout.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cross.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\current_location.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dollor.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dollor_not_paid.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\map_pin.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_left_selected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_left_unselect.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_right_selected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_right_unselect.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\checkout.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\cross.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\current_location.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dollor.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dollor_not_paid.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\map_pin.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tab_left_selected.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tab_left_unselect.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tab_right_selected.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tab_right_unselect.png" />
+    <AndroidResource Include="Resources\layout\AlertFeed.axml" />
+    <AndroidResource Include="Resources\layout\AlertFeedItem.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\alert_tab_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\check_tab_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\report_tab_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\alert_tab_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\check_tab_bg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\report_tab_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\alert_tab_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\check_tab_bg.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\report_tab_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\alert_tab_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\check_tab_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\report_tab_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\alert_tab_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\check_tab_bg.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\report_tab_bg.png" />
+    <AndroidResource Include="Resources\layout\ChangeWorkCenter.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\cross_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\top_bar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\cross_white.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\top_bar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cross_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\top_bar.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cross_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\top_bar.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\cross_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\top_bar.png" />
+    <AndroidResource Include="Resources\layout\MarkerWindow.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\zoom_in.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\zoom_out.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\zoom_in.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\zoom_out.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\zoom_in.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\zoom_out.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\pin.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\pin.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\pin.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\pin.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\zoom_in.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\zoom_out.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\pin.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\zoom_in.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\zoom_out.png" />
+    <AndroidResource Include="Resources\layout\CreateAlert.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\black.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\blue.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\brown.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\button.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\camara.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dark_grey.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\delete_this.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\green.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\grey.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\hover.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img_bg_selected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img_bg_unselected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img_center_bg_unslected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img_center_selected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img_right_unselect.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img1.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img1_selected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img2_selected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img3.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img3_selected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img4.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img4_selected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img5.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img5_selected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img6.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img6_selected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\red.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\right_arrow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\slide_select.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\slide_unselect.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\yellow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\add_new_one.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\add_new_one.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\black.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\blue.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\brown.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\button.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\camara.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dark_grey.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\delete_this.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\green.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\grey.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\hover.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img_bg_selected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img_bg_unselected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img_center_bg_unslected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img_center_selected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img_right_unselect.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img1.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img1_selected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img2_selected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img3.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img3_selected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img4.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img4_selected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img5.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img5_selected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img6.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img6_selected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\red.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\right_arrow.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\slide_select.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\slide_unselect.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\white.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\yellow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\add_new_one.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\black.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\blue.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\brown.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\button.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\camara.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dark_grey.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\delete_this.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\green.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\grey.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\hover.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img_bg_selected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img_bg_unselected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img_center_bg_unslected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img_center_selected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img_right_unselect.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img1.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img1_selected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img2.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img2_selected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img3.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img3_selected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img4.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img4_selected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img5.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img5_selected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img6.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img6_selected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\red.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\right_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\slide_select.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\slide_unselect.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\yellow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\add_new_one.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\black.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\blue.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\brown.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\button.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\camara.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dark_grey.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\delete_this.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\green.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\grey.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\hover.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img_bg_selected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img_bg_unselected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img_center_bg_unslected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img_center_selected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img_right_unselect.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img1.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img1_selected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img2.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img2_selected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img3.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img3_selected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img4.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img4_selected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img5.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img5_selected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img6.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img6_selected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\red.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\right_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\slide_select.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\slide_unselect.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\yellow.png" />
+    <AndroidResource Include="Resources\layout\AddVehicle.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Adapter\" />
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Assets\fonts\" />
+    <Folder Include="Control\" />
+    <Folder Include="LocationService\" />
+  </ItemGroup>
+  <Import Project="..\Jornalero.Core\Jornalero.Core.projitems" Label="Shared" Condition="Exists('..\Jornalero.Core\Jornalero.Core.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <XamarinComponentReference Include="GCMClient">
+      <Version>1.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv7appcompat">
+      <Version>23.1.1.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fonts\SF-UI-Display-Black.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Display-Bold.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Display-Heavy.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Display-Light.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Display-Medium.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Display-Regular.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Display-Semibold.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Display-Thin.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Display-Ultralight.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Text-Bold.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Text-BoldItalic.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Text-Heavy.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Text-HeavyItalic.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Text-Italic.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Text-Light.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Text-LightItalic.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Text-Medium.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Text-MediumItalic.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Text-Regular.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Text-Semibold.ttf" />
+    <AndroidAsset Include="Assets\fonts\SF-UI-Text-SemiboldItalic.ttf" />
+  </ItemGroup>
+</Project>

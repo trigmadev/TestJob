@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="1" xml:space="preserve">
+    <value>Поделитесь своими любимыми местами с миром</value>
+  </data>
+	<data name="2" xml:space="preserve">
+    <value>Что делает ваш район удивительным?</value>
+  </data>
+	<data name="3" xml:space="preserve">
+    <value>Найдите места, которые любят местные жители</value>
+  </data>
+	<data name="4" xml:space="preserve">
+    <value>Продолжить с эл.почтой</value>
+  </data>
+	<data name="5" xml:space="preserve">
+    <value>Создать аккаунт</value>
+  </data>
+	<data name="6" xml:space="preserve">
+    <value>Электр. адрес</value>
+  </data>
+	<data name="7" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+	<data name="8" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+	<data name="9" xml:space="preserve">
+    <value>Уже есть аккаунт?</value>
+  </data>
+	<data name="10" xml:space="preserve">
+    <value>Добро пожаловать!</value>
+  </data>
+	<data name="11" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+	<data name="12" xml:space="preserve">
+    <value>Забыли пароль?</value>
+  </data>
+	<data name="13" xml:space="preserve">
+    <value>Восстановить пароль</value>
+  </data>
+	<data name="14" xml:space="preserve">
+    <value>Регистрация в Spark</value>
+  </data>
+	<data name="15" xml:space="preserve">
+    <value>Настройте свой профиль</value>
+  </data>
+	<data name="16" xml:space="preserve">
+    <value>Проверяем наличие...</value>
+  </data>
+	<data name="17" xml:space="preserve">
+    <value>Сохраняем вас...</value>
+  </data>
+	<data name="18" xml:space="preserve">
+    <value>Сделать фото</value>
+  </data>
+	<data name="19" xml:space="preserve">
+    <value>Выберать фотографию</value>
+  </data>
+	<data name="20" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+	<data name="21" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+	<data name="22" xml:space="preserve">
+    <value>Вход в систему</value>
+  </data>
+	<data name="23" xml:space="preserve">
+    <value>Добавление</value>
+  </data>
+	<data name="24" xml:space="preserve">
+    <value>Местонахождение, Местонахождение, Местонахождение</value>
+  </data>
+	<data name="25" xml:space="preserve">
+    <value>Spark показывает, чем заняты люди в вашем районе. Предоставьте Spark доступ к вашему местонахождению, и пускайтесь в приключения!</value>
+  </data>
+	<data name="26" xml:space="preserve">
+    <value>Далее</value>
+  </data>
+	<data name="27" xml:space="preserve">
+    <value>В вашем телефоне отключены настройки локации.</value>
+  </data>
+	<data name="28" xml:space="preserve">
+    <value>В настройки</value>
+  </data>
+	<data name="29" xml:space="preserve">
+    <value>Исследовать с Spark...</value>
+  </data>
+	<data name="30" xml:space="preserve">
+    <value>Включить местоположение вашего телефона, чтобы исследовать и поделиться тем, что происходит рядом с вами.</value>
+  </data>
+	<data name="31" xml:space="preserve">
+    <value>Показать Сан-Франциско</value>
+  </data>
+	<data name="32" xml:space="preserve">
+    <value>Подключаемся к Spark...</value>
+  </data>
+	<data name="33" xml:space="preserve">
+    <value>Spark использует местонахождение, чтобы поделиться с вами захватывающим опытом пользователей, которые рядом. Это конфиденциально и безопасно.</value>
+  </data>
+	<data name="34" xml:space="preserve">
+    <value>Разрешите Spark использовать ваше местонахождение, чтобы обнаружить и поделиться тем, что происходит рядом с вами.</value>
+  </data>
+	<data name="35" xml:space="preserve">
+    <value>Разрешить Spark использовать ваше местоположение</value>
+  </data>
+	<data name="36" xml:space="preserve">
+    <value>Пока не готовы? Попробуйте Spark для Сан-Франциско, который знают только местные жители. </value>
+  </data>
+	<data name="37" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+	<data name="38" xml:space="preserve">
+    <value>Ещё нет</value>
+  </data>
+	<data name="39" xml:space="preserve">
+    <value>Начинаем веселиться!</value>
+  </data>
+	<data name="40" xml:space="preserve">
+    <value>Похоже, вы один из первых пользователей в вашем районе! Начните первым делиться тем, что происходит в вашем районе.</value>
+  </data>
+	<data name="41" xml:space="preserve">
+    <value>Spark показывает главные тенденции в вашем районе. Вдохновитесь!</value>
+  </data>
+	<data name="42" xml:space="preserve">
+    <value>Посты показывают, что есть крутого в вашем районе. Что происходит рядом с вами?</value>
+  </data>
+	<data name="43" xml:space="preserve">
+    <value>Оценивайте посты, чтобы повысить рейтинг и рассказать другим</value>
+  </data>
+	<data name="44" xml:space="preserve">
+    <value>Найти рядом с вами в...</value>
+  </data>
+	<data name="45" xml:space="preserve">
+    <value>Если хотите добавить ваши любимые события, места, и разделить мнение с другими, нажмите...</value>
+  </data>
+	<data name="46" xml:space="preserve">
+    <value>Бегаем как белка в колесе</value>
+  </data>
+	<data name="47" xml:space="preserve">
+    <value>Заводим ускоритель</value>
+  </data>
+	<data name="48" xml:space="preserve">
+    <value>Ищем ближайщее классное место</value>
+  </data>
+	<data name="49" xml:space="preserve">
+    <value>Зажигаем веселье рядом с вами</value>
+  </data>
+	<data name="50" xml:space="preserve">
+    <value>Загружаем информацию</value>
+  </data>
+	<data name="51" xml:space="preserve">
+    <value>Заряжаемся....</value>
+  </data>
+	<data name="52" xml:space="preserve">
+    <value>Выжимаемся по-максимуму</value>
+  </data>
+	<data name="53" xml:space="preserve">
+    <value>Звоним главному инженеру</value>
+  </data>
+	<data name="54" xml:space="preserve">
+    <value>Включаем максимальную скорость</value>
+  </data>
+	<data name="55" xml:space="preserve">
+    <value>Постигаем квантовую физику</value>
+  </data>
+	<data name="56" xml:space="preserve">
+    <value>Исследуем места поблизости</value>
+  </data>
+	<data name="57" xml:space="preserve">
+    <value>Исследуем места поблизости</value>
+  </data>
+	<data name="58" xml:space="preserve">
+    <value>Перелистываем справочник</value>
+  </data>
+	<data name="59" xml:space="preserve">
+    <value>Размещаем сообщения о местах поблизости в Spark</value>
+  </data>
+	<data name="60" xml:space="preserve">
+    <value>Делиться - хорошо! </value>
+  </data>
+	<data name="61" xml:space="preserve">
+    <value>Делимся весельем</value>
+  </data>
+	<data name="62" xml:space="preserve">
+    <value>Поблизости</value>
+  </data>
+	<data name="63" xml:space="preserve">
+    <value>Уведомления</value>
+  </data>
+	<data name="64" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
+	<data name="65" xml:space="preserve">
+    <value>Список</value>
+  </data>
+	<data name="66" xml:space="preserve">
+    <value>Это открытый пост Instagram, который вам должен понравится</value>
+  </data>
+	<data name="67" xml:space="preserve">
+    <value>Оценка постов даст вам крутое звание. Похвастуйтесь своим авторитетом!</value>
+  </data>
+	<data name="68" xml:space="preserve">
+    <value>Вот топ сообщений о местах рядом с вами!</value>
+  </data>
+	<data name="69" xml:space="preserve">
+    <value>Задайте вопрос, напишите заметку, или просто поблагодарите!</value>
+  </data>
+	<data name="70" xml:space="preserve">
+    <value>Космонавт</value>
+  </data>
+	<data name="71" xml:space="preserve">
+    <value>Пришелец</value>
+  </data>
+	<data name="72" xml:space="preserve">
+    <value>Начинающий</value>
+  </data>
+	<data name="73" xml:space="preserve">
+    <value>Разведчик</value>
+  </data>
+	<data name="74" xml:space="preserve">
+    <value>Исследователь</value>
+  </data>
+	<data name="75" xml:space="preserve">
+    <value>Проводник</value>
+  </data>
+	<data name="76" xml:space="preserve">
+    <value>сейчас</value>
+  </data>
+	<data name="77" xml:space="preserve">
+    <value>мин.</value>
+  </data>
+	<data name="78" xml:space="preserve">
+    <value>минуты</value>
+  </data>
+	<data name="79" xml:space="preserve">
+    <value>часы</value>
+  </data>
+	<data name="80" xml:space="preserve">
+    <value>дни</value>
+  </data>
+	<data name="81" xml:space="preserve">
+    <value>недели</value>
+  </data>
+	<data name="82" xml:space="preserve">
+    <value>месяцы</value>
+  </data>
+	<data name="83" xml:space="preserve">
+    <value>Поделитесь тем, что происходит рядом с вами...</value>
+  </data>
+	<data name="84" xml:space="preserve">
+    <value>Отметить место</value>
+  </data>
+	<data name="85" xml:space="preserve">
+    <value>Текущее место</value>
+  </data>
+	<data name="86" xml:space="preserve">
+    <value>Создать новый пост</value>
+  </data>
+	<data name="87" xml:space="preserve">
+    <value>Пост</value>
+  </data>
+	<data name="88" xml:space="preserve">
+    <value>Добавляем</value>
+  </data>
+	<data name="89" xml:space="preserve">
+    <value>Поделитесь этим с вашими друзьями на Facebook и Twitter</value>
+  </data>
+	<data name="90" xml:space="preserve">
+    <value>Spark делает всё, чтобы вы знали последние новинки!</value>
+  </data>
+	<data name="91" xml:space="preserve">
+    <value>Включите Push-уведомления, чтобы видеть комментарии других пользователей.</value>
+  </data>
+	<data name="92" xml:space="preserve">
+    <value>не сейчас</value>
+  </data>
+	<data name="93" xml:space="preserve">
+    <value>Сообщить мне!</value>
+  </data>
+	<data name="94" xml:space="preserve">
+    <value>Пока ничего интересного здесь!</value>
+  </data>
+	<data name="95" xml:space="preserve">
+    <value>Свяжитесь с теми, кто вокруг вас, и получайте уведомления первыми прямо здесь ;)</value>
+  </data>
+	<data name="96" xml:space="preserve">
+    <value>Уведомления</value>
+  </data>
+	<data name="97" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+	<data name="98" xml:space="preserve">
+    <value>Ведите меня туда!</value>
+  </data>
+	<data name="99" xml:space="preserve">
+    <value>(name) прокомментировал(а) вашу оценку для (location)</value>
+  </data>
+	<data name="100" xml:space="preserve">
+    <value>(name) оценил(а) ваш пост про (location)</value>
+  </data>
+	<data name="101" xml:space="preserve">
+    <value>(name) прокомментировал(а) ваш пост про (location)</value>
+  </data>
+	<data name="102" xml:space="preserve">
+    <value>(name) ответил(а) на ваш пост про (location)</value>
+  </data>
+	<data name="103" xml:space="preserve">
+    <value>Редактировать профиль</value>
+  </data>
+	<data name="104" xml:space="preserve">
+    <value>Недавняя активность</value>
+  </data>
+	<data name="105" xml:space="preserve">
+    <value>Изменить фотографию</value>
+  </data>
+	<data name="106" xml:space="preserve">
+    <value>Изменить имя пользователя</value>
+  </data>
+	<data name="107" xml:space="preserve">
+    <value>Пока нет активности :{</value>
+  </data>
+	<data name="108" xml:space="preserve">
+    <value>пост</value>
+  </data>
+	<data name="109" xml:space="preserve">
+    <value>опубликовано</value>
+  </data>
+	<data name="110" xml:space="preserve">
+    <value>прокомментировано</value>
+  </data>
+	<data name="111" xml:space="preserve">
+    <value>оценено</value>
+  </data>
+	<data name="112" xml:space="preserve">
+    <value>комментариях по эл. почте</value>
+  </data>
+	<data name="113" xml:space="preserve">
+    <value>Push о комментариях</value>
+  </data>
+	<data name="114" xml:space="preserve">
+    <value>Push об оценках</value>
+  </data>
+	<data name="115" xml:space="preserve">
+    <value>Push о местах поблизости</value>
+  </data>
+	<data name="116" xml:space="preserve">
+    <value>Другое</value>
+  </data>
+	<data name="117" xml:space="preserve">
+    <value>Поддержка</value>
+  </data>
+	<data name="118" xml:space="preserve">
+    <value>Анализ App Store</value>
+  </data>
+	<data name="119" xml:space="preserve">
+    <value>блог</value>
+  </data>
+	<data name="120" xml:space="preserve">
+    <value>Условия использования</value>
+  </data>
+	<data name="121" xml:space="preserve">
+    <value>Политика Конфиденциальности</value>
+  </data>
+	<data name="122" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+	<data name="123" xml:space="preserve">
+    <value>Текущая версия</value>
+  </data>
+	<data name="124" xml:space="preserve">
+    <value>Телепорт</value>
+  </data>
+	<data name="125" xml:space="preserve">
+    <value>Текущее местоположение</value>
+  </data>
+	<data name="126" xml:space="preserve">
+    <value>Популярные места</value>
+  </data>
+	<data name="127" xml:space="preserve">
+    <value>Самые горячие места в Spark прямо сейчас! Продолжайте следить за новинками.</value>
+  </data>
+	<data name="128" xml:space="preserve">
+    <value>Детали</value>
+  </data>
+	<data name="129" xml:space="preserve">
+    <value>Поделиться</value>
+  </data>
+	<data name="130" xml:space="preserve">
+    <value>Ваш комментарий</value>
+  </data>
+	<data name="131" xml:space="preserve">
+    <value>Получить координаты</value>
+  </data>
+	<data name="132" xml:space="preserve">
+    <value>Отметить место</value>
+  </data>
+	<data name="133" xml:space="preserve">
+    <value>прокомментировано</value>
+  </data>
+	<data name="134" xml:space="preserve">
+    <value>оценено</value>
+  </data>
+	<data name="135" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+	<data name="136" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+	<data name="137" xml:space="preserve">
+    <value>Ой!</value>
+  </data>
+	<data name="138" xml:space="preserve">
+    <value>Проблема в загрузке последних данных. Хотите попробовать ещё раз?</value>
+  </data>
+	<data name="139" xml:space="preserve">
+    <value>Нет, спасибо</value>
+  </data>
+	<data name="140" xml:space="preserve">
+    <value>Ещё раз</value>
+  </data>
+	<data name="141" xml:space="preserve">
+    <value>Не хватает данных</value>
+  </data>
+	<data name="142" xml:space="preserve">
+    <value>Необходим адрес эл.почты и пароль</value>
+  </data>
+	<data name="143" xml:space="preserve">
+    <value>Неверная эл.почта</value>
+  </data>
+	<data name="144" xml:space="preserve">
+    <value>Похоже это неверный адрес эл.почты</value>
+  </data>
+	<data name="145" xml:space="preserve">
+    <value>Эта эл.почта уже используется. Может вы хотите войти?</value>
+  </data>
+	<data name="146" xml:space="preserve">
+    <value>Ошибка загрузки мест поблизости</value>
+  </data>
+	<data name="147" xml:space="preserve">
+    <value>Не можем вас найти</value>
+  </data>
+	<data name="148" xml:space="preserve">
+    <value>Проверьте ещё раз сочетание эл.почты и пароля.</value>
+  </data>
+	<data name="149" xml:space="preserve">
+    <value>Иногда размер имеет значение!</value>
+  </data>
+	<data name="150" xml:space="preserve">
+    <value>Мы хотим, чтобы ваши посты выглядели супер. Пожалуйста, выберите фото, которые...</value>
+  </data>
+	<data name="151" xml:space="preserve">
+    <value>Пример поста</value>
+  </data>
+	<data name="152" xml:space="preserve">
+    <value>Могли бы вы проголосовать за этот пост, чтобы другие нашли его?</value>
+  </data>
+	<data name="153" xml:space="preserve">
+    <value>Мог бы этот пост помочь вам увидеть дополнительные детали?</value>
+  </data>
+	<data name="154" xml:space="preserve">
+    <value>Прямо здесь</value>
+  </data>
+	<data name="155" xml:space="preserve">
+    <value>Потрясающий пост!</value>
+  </data>
+	<data name="156" xml:space="preserve">
+    <value>Мы автоматически проголосовали за вас. Если честно, ваш пост просто потрясающий!</value>
+  </data>
+	<data name="157" xml:space="preserve">
+    <value>Нельзя отменить голосование своему посту</value>
+  </data>
+	<data name="158" xml:space="preserve">
+    <value>Ошибка входа</value>
+  </data>
+	<data name="159" xml:space="preserve">
+    <value>Ошибка входа. Попробуйте ещё раз.</value>
+  </data>
+	<data name="160" xml:space="preserve">
+    <value>Попытка не удалась</value>
+  </data>
+	<data name="161" xml:space="preserve">
+    <value>Попытка не удалась. Пожалуйста, попробуйте ещё раз.</value>
+  </data>
+	<data name="162" xml:space="preserve">
+    <value>Уведомления</value>
+  </data>
+	<data name="163" xml:space="preserve">
+    <value>имя</value>
+  </data>
+	<data name="164" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+	<data name="165" xml:space="preserve">
+    <value>эл.почта</value>
+  </data>
+</root>

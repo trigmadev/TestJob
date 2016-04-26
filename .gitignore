@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.suo
+*.user
+/Jornalero.web/obj/Debug
+/Jornalero.web/bin
+*.htm
+/Jornalero.droid/bin/Debug
+/Jornalero.droid/obj/Debug
+/Jornalero.iOS/obj/iPhone/Debug
+/Jornalero.Library/obj/Debug

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gymnut="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <View
+        android:id="@+id/vBG"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.9"
+        android:background="#5a5151" />
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="25dip"
+        android:layout_height="25dip"
+        android:contentDescription="@null"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dip" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivClose"
+        android:fillViewport="true">
+        <LinearLayout
+            android:id="@+id/layoutPopView"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/layoutPopPdfView"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+</RelativeLayout>

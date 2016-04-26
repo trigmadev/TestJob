@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jornalero="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/ToolbarBack" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+            <Jornalero.droid.JornaleroTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                jornalero:customFont="fonts/SF-UI-Text-Semibold.ttf"
+                android:layout_marginBottom="10dp"
+                android:text="@string/current_email_address"
+                android:textColor="@color/dark_grey"
+                android:textSize="15sp" />
+            <Jornalero.droid.JornaleroTextView
+                android:id="@+id/tvCurrentEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/sky_blue_input"
+                jornalero:customFont="fonts/SF-UI-Text-Regular.ttf"
+                android:padding="14dp"
+                android:textColor="#4E555B"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+            <Jornalero.droid.JornaleroTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                jornalero:customFont="fonts/SF-UI-Text-Semibold.ttf"
+                android:text="@string/new_email_address"
+                android:textColor="@color/dark_grey"
+                android:textSize="15sp" />
+            <Jornalero.droid.JornaleroEditText
+                android:id="@+id/etNewEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/sky_blue_input"
+                jornalero:customFont="fonts/SF-UI-Text-Regular.ttf"
+                android:hint="@string/type_here_txt"
+                android:inputType="textEmailAddress"
+                android:padding="14dp"
+                android:textColor="#4E555B"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <Jornalero.droid.JornaleroButton
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/cancel"
+                android:gravity="center"
+                android:textSize="15sp"
+                jornalero:customFont="fonts/SF-UI-Display-Semibold.ttf"
+                android:text="@string/cancel" />
+            <Jornalero.droid.JornaleroButton
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                jornalero:customFont="fonts/SF-UI-Display-Semibold.ttf"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:background="@drawable/signup_btn"
+                android:text="@string/save"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

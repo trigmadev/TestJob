@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f1bf60e113954ce6a225e6203f8ae730" Name="Diagram1">
+        <EntityTypeShape EntityType="dbJornaleroModel.tblAdmin" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbJornaleroModel.tblAlert" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbJornaleroModel.tblArea" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbJornaleroModel.tblBirthPlace" Width="1.5" PointX="3.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbJornaleroModel.tblInvitationCode" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbJornaleroModel.tblLabor" Width="1.5" PointX="6" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbJornaleroModel.tblProfession" Width="1.5" PointX="3.75" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbJornaleroModel.tblReport" Width="1.5" PointX="10" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbJornaleroModel.tblStop" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbJornaleroModel.tblSuperAdmin" Width="1.5" PointX="2.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbJornaleroModel.tblVehicleType" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbJornaleroModel.tblWorkCenter" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="dbJornaleroModel.FK_InvitationCode_tblAdmin" ManuallyRouted="false" />
+        <AssociationConnector Association="dbJornaleroModel.FK_tblAdmin_tblWorkCenter" ManuallyRouted="false" />
+        <AssociationConnector Association="dbJornaleroModel.FK_tblReport_tblArea" ManuallyRouted="false" />
+        <AssociationConnector Association="dbJornaleroModel.FK_tblLabor_tblBirthPlace" ManuallyRouted="false" />
+        <AssociationConnector Association="dbJornaleroModel.FK_tblLabor_tblProfession" ManuallyRouted="false" />
+        <AssociationConnector Association="dbJornaleroModel.FK_tblLabor_tblWorkCenter" ManuallyRouted="false" />
+        <AssociationConnector Association="dbJornaleroModel.FK_tblReport_tblVehicleType" ManuallyRouted="false" />
+        <AssociationConnector Association="dbJornaleroModel.FK_tblStop_tblWorkCenter" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

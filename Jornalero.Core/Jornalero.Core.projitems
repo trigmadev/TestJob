@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{37B372E8-D152-4822-988D-31DD544FD6A9}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Jornalero.Core</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Contract\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Model\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Service\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Security\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\Enums.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\GoogleMap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\JornaleroResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SystemResources.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\ServiceHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\Security.cs" />
+  </ItemGroup>
+</Project>

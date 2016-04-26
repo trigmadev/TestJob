@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="transparent">#00000000</color>
+	<color name="main_color">#446DA1</color>
+	<color name="nav_bg">#314661</color>
+	<color name="btn_color">#EE3E15</color>
+	<color name="ripple">#ff80ab</color>
+	<color name="accent">#e95a35</color>
+	<color name="accent_pressed">#BF360C</color>
+	<color name="light_gray">#a4a4a4</color>
+	<color name="lighter_gray">#c6c1c1</color>
+	<color name="goal_unselect">#4c4c4c</color>
+	<color name="goal_select">#F15b2b</color>
+	<color name="logo_black">#374047</color>
+	<color name="colorPrimary">#3F51B5</color>
+	<color name="colorPrimaryDark">#303F9F</color>
+	<color name="colorAccent">#FF4081</color>
+	<color name="colorwhite">#FFFFFF</color>
+	<color name="colorblack">#000000</color>
+	<color name="shadow">#555555</color>
+	<color name="title">#777777</color>
+	<color name="garker_orange">#4574B0</color>
+	<color name="primary_dark">#D0Af0A</color>
+	<color name="white">#ffffff</color>
+	<color name="view_color_slider">#29384c</color>
+	<color name="terms">#9aa9b9</color>
+	<color name="sky_blue_input">#e7f0fa</color>
+	<color name="dark_grey">#7d8793</color>
+	<color name="select_color">#314661</color>
+	<color name="error_color">#F7656D</color>
+	<color name="edit_text_color">#4E555B</color>
+	<color name="edit_back_color">#e8f0fb</color>
+</resources>

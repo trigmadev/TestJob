@@ -1,0 +1,345 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Bootstrap Admin App + jQuery">
+    <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+    <title>Angle - Bootstrap Admin Template</title>
+    <!-- =============== VENDOR STYLES ===============-->
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="~/vendor/fontawesome/css/font-awesome.min.css">
+    <!-- SIMPLE LINE ICONS-->
+    <link rel="stylesheet" href="~/vendor/simple-line-icons/css/simple-line-icons.css">
+    <!-- ANIMATE.CSS-->
+    <link rel="stylesheet" href="~/vendor/animate.css/animate.min.css">
+    <!-- WHIRL (spinners)-->
+    <link rel="stylesheet" href="~/vendor/whirl/dist/whirl.css">
+    <!-- =============== PAGE VENDOR STYLES ===============-->
+    <!-- WEATHER ICONS-->
+    <link rel="stylesheet" href="~/vendor/weather-icons/css/weather-icons.min.css">
+    <!-- =============== BOOTSTRAP STYLES ===============-->
+    <link rel="stylesheet" href="/css/bootstrap.css" id="bscss">
+    <!-- =============== APP STYLES ===============-->
+    <link rel="stylesheet" href="/css/app.css" id="maincss">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/1.0.7/css/responsive.bootstrap.min.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <!-- top navbar-->
+        <header class="topnavbar-wrapper">
+            <!-- START Top Navbar-->
+            <nav role="navigation" class="navbar topnavbar">
+                <!-- START navbar header-->
+                <div class="navbar-header">
+                    <a href="#/" class="navbar-brand">
+                        <div class="brand-logo">
+                            <img src="~/img/Janalero.png" class="img-responsive" />
+                            @*<img src="img/logo.png" alt="App Logo" class="img-responsive">*@
+                        </div>
+                        <div class="brand-logo-collapsed">
+                            <img src="img/logo-single.png" alt="App Logo" class="img-responsive">
+                        </div>
+                    </a>
+                </div>
+                <!-- END navbar header-->
+                <!-- START Nav wrapper-->
+                <div class="nav-wrapper">
+                    <!-- START Left navbar-->
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
+                            <a href="#" data-trigger-resize="" data-toggle-state="aside-collapsed" class="hidden-xs">
+                                <em class="fa fa-navicon"></em>
+                            </a>
+                            <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->
+                            <a href="#" data-toggle-state="aside-toggled" data-no-persist="true" class="visible-xs sidebar-toggle">
+                                <em class="fa fa-navicon"></em>
+                            </a>
+                        </li>
+                        <!-- START User avatar toggle-->
+                        <li>
+                            <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
+                            <a id="user-block-toggle" href="#user-block" data-toggle="collapse">
+                                <em class="icon-user"></em>
+                            </a>
+                        </li>
+                        <!-- END User avatar toggle-->
+                        <!-- START lock screen-->
+                        <li>
+                            <a href="lock.html" title="Lock screen">
+                                <em class="icon-lock"></em>
+                            </a>
+                        </li>
+                        <!-- END lock screen-->
+                    </ul>
+                    <!-- END Left navbar-->
+                    <!-- START Right Navbar-->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Search icon-->
+                        <li>
+                            <a href="#" data-search-open="">
+                                <em class="icon-magnifier"></em>
+                            </a>
+                        </li>
+                        <!-- Fullscreen (only desktops)-->
+                        <li class="visible-lg">
+                            <a href="#" data-toggle-fullscreen="">
+                                <em class="fa fa-expand"></em>
+                            </a>
+                        </li>
+                        <!-- START Alert menu-->
+                        <li class="dropdown dropdown-list">
+                            <a href="#" data-toggle="dropdown">
+                                <em class="icon-bell"></em>
+                                <div class="label label-danger">11</div>
+                            </a>
+                            <!-- START Dropdown menu-->
+                            <ul class="dropdown-menu animated flipInX">
+                                <li>
+                                    <!-- START list group-->
+                                    <div class="list-group">
+                                        <!-- list item-->
+                                        <a href="#" class="list-group-item">
+                                            <div class="media-box">
+                                                <div class="pull-left">
+                                                    <em class="fa fa-twitter fa-2x text-info"></em>
+                                                </div>
+                                                <div class="media-box-body clearfix">
+                                                    <p class="m0">New followers</p>
+                                                    <p class="m0 text-muted">
+                                                        <small>1 new follower</small>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- list item-->
+                                        <a href="#" class="list-group-item">
+                                            <div class="media-box">
+                                                <div class="pull-left">
+                                                    <em class="fa fa-envelope fa-2x text-warning"></em>
+                                                </div>
+                                                <div class="media-box-body clearfix">
+                                                    <p class="m0">New e-mails</p>
+                                                    <p class="m0 text-muted">
+                                                        <small>You have 10 new emails</small>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- list item-->
+                                        <a href="#" class="list-group-item">
+                                            <div class="media-box">
+                                                <div class="pull-left">
+                                                    <em class="fa fa-tasks fa-2x text-success"></em>
+                                                </div>
+                                                <div class="media-box-body clearfix">
+                                                    <p class="m0">Pending Tasks</p>
+                                                    <p class="m0 text-muted">
+                                                        <small>11 pending task</small>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- last list item-->
+                                        <a href="#" class="list-group-item">
+                                            <small>More notifications</small>
+                                            <span class="label label-danger pull-right">14</span>
+                                        </a>
+                                    </div>
+                                    <!-- END list group-->
+                                </li>
+                            </ul>
+                            <!-- END Dropdown menu-->
+                        </li>
+                        <!-- END Alert menu-->
+                        <!-- START Offsidebar button-->
+                        <li>
+                            <a href="#" data-toggle-state="offsidebar-open" data-no-persist="true">
+                                <em class="icon-notebook"></em>
+                            </a>
+                        </li>
+                        <!-- END Offsidebar menu-->
+                    </ul>
+                    <!-- END Right Navbar-->
+                </div>
+                <!-- END Nav wrapper-->
+                <!-- START Search form-->
+                <form role="search" action="search.html" class="navbar-form">
+                    <div class="form-group has-feedback">
+                        <input type="text" placeholder="Type and hit enter ..." class="form-control">
+                        <div data-search-dismiss="" class="fa fa-times form-control-feedback"></div>
+                    </div>
+                    <button type="submit" class="hidden btn btn-default">Submit</button>
+                </form>
+                <!-- END Search form-->
+            </nav>
+            <!-- END Top Navbar-->
+        </header>
+        <!-- sidebar-->
+        <aside class="aside">
+            <!-- START Sidebar (left)-->
+            <div class="aside-inner">
+                <nav data-sidebar-anyclick-close="" class="sidebar">
+                    <!-- START sidebar nav-->
+                    <ul class="nav">
+                        <!-- START user info-->
+                        <li class="has-user-block">
+                            <div id="user-block" class="collapse">
+                                <div class="item user-block">
+                                    <!-- User picture-->
+                                    <div class="user-block-picture">
+                                        <div class="user-block-status">
+                                            <img src="img/user/02.jpg" alt="Avatar" width="60" height="60" class="img-thumbnail img-circle">
+                                            <div class="circle circle-success circle-lg"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Name and Job-->
+                                    <div class="user-block-info">
+                                        <span class="user-block-name">Hello, Mike</span>
+                                        <span class="user-block-role">Designer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- END user info-->
+                        <!-- Iterates over all sidebar items-->
+                        <li class="nav-heading ">
+                            <span data-localize="sidebar.heading.HEADER">Main Navigation</span>
+                        </li>
+                        <li class=" ">
+                            <a href="#dashboard" title="Dashboard" data-toggle="collapse">
+
+                                <em class="icon-speedometer"></em>
+                                <span data-localize="sidebar.nav.DASHBOARD">PROFESSION</span>
+                            </a>
+                            <ul id="dashboard" class="nav sidebar-subnav collapse">
+                                <li class="sidebar-subnav-header">PROFESSION</li>
+                                <li class=" ">
+                                    <a href="@Url.Action("AddProfession","SuperAdmin")" title="ADD PROFESSION">
+                                        <span>ADD PROFESSION</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="@Url.Action("ProfessionList", "SuperAdmin")" title="PROFESSION LIST">
+                                        <span>PROFESSION LIST</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        
+
+                        <li class=" ">
+                            <a href="#elements" title="Elements" data-toggle="collapse">
+                                <em class="icon-chemistry"></em>
+                                <span data-localize="sidebar.nav.element.ELEMENTS">Area</span>
+                            </a>
+                            <ul id="elements" class="nav sidebar-subnav collapse">
+                                <li class="sidebar-subnav-header">Area</li>
+                                <li class=" ">
+                                    <a href="@Url.Action("AddArea","SuperAdmin")" title="ADD AREA">
+                                        <span>ADD AREA</span></a>
+                                </li>
+                                <li class=" ">
+                                    <a href="@Url.Action("AreaList", "SuperAdmin")" title="AREA LIST">
+                                        <span>AREA LIST</span>
+                                    </a>
+                                </li>
+
+
+
+                            </ul>
+                        </li>
+                        <li class=" ">
+                            <a href="#BirthPlace" title="Elements" data-toggle="collapse">
+                                <em class="icon-chemistry"></em>
+                                <span data-localize="sidebar.nav.element.ELEMENTS">Birth Place</span>
+                            </a>
+                            <ul id="BirthPlace" class="nav sidebar-subnav collapse">
+                                <li class="sidebar-subnav-header">Birth Place</li>
+                                <li class=" ">
+                                    <a href="@Url.Action("AddBirthPlace", "SuperAdmin")" title="ADD Birth place">
+                                        <span>ADD Birth Place</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="@Url.Action("BirthPlaceList", "SuperAdmin")" title="Birth Place LIST">
+                                        <span>Birth Place List</span>
+                                    </a>
+                                </li>
+
+
+
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                    <!-- END sidebar nav-->
+                </nav>
+            </div>
+            <!-- END Sidebar (left)-->
+        </aside>
+        <!-- offsidebar-->
+        <!-- Main section-->
+        @RenderBody();
+
+        <!-- Page footer-->
+        <footer>
+            <span>&copy; 2016 - Angle</span>
+        </footer>
+    </div>
+
+    <!-- =============== Data Table ===============-->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.9/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/1.0.7/js/dataTables.responsive.min.js"></script>
+
+    <!-- =============== VENDOR SCRIPTS ===============-->
+    <!-- MODERNIZR-->
+    <script src="~/vendor/modernizr/modernizr.custom.js"></script>
+    <!-- MATCHMEDIA POLYFILL-->
+    <script src="~/vendor/matchMedia/matchMedia.js"></script>
+    <!-- JQUERY-->
+    <script src="~/vendor/jquery/dist/jquery.js"></script>
+    <!-- BOOTSTRAP-->
+    <script src="~/vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- STORAGE API-->
+    <script src="~/vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+    <!-- JQUERY EASING-->
+    <script src="~/vendor/jquery.easing/js/jquery.easing.js"></script>
+    <!-- ANIMO-->
+    <script src="~/vendor/animo.js/animo.js"></script>
+    <!-- SLIMSCROLL-->
+    <script src="~/vendor/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- SCREENFULL-->
+    <script src="~/vendor/screenfull/dist/screenfull.js"></script>
+    <!-- LOCALIZE-->
+    <script src="~/vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
+    <!-- RTL demo-->
+    <script src="js/demo/demo-rtl.js"></script>
+    <!-- =============== PAGE VENDOR SCRIPTS ===============-->
+    <!-- SPARKLINE-->
+    <script src="~/vendor/sparkline/index.js"></script>
+    <!-- FLOT CHART-->
+    <script src="~/vendor/Flot/jquery.flot.js"></script>
+    <script src="~/vendor/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="~/vendor/Flot/jquery.flot.resize.js"></script>
+    <script src="~/vendor/Flot/jquery.flot.pie.js"></script>
+    <script src="~/vendor/Flot/jquery.flot.time.js"></script>
+    <script src="~/vendor/Flot/jquery.flot.categories.js"></script>
+    <script src="~/vendor/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <!-- CLASSY LOADER-->
+    <script src="~/vendor/jquery-classyloader/js/jquery.classyloader.min.js"></script>
+    <!-- MOMENT JS-->
+    <script src="~/vendor/moment/min/moment-with-locales.min.js"></script>
+    <!-- DEMO-->
+    <script src="js/demo/demo-flot.js"></script>
+    <!-- =============== APP SCRIPTS ===============-->
+    <script src="js/app.js"></script>
+</body>
+</html>
