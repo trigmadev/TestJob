@@ -17,6 +17,7 @@ namespace Jornalero.Core
 		public const string JornaleroPreferences = "JornaleroPreferences";
 		public const string Jornalero = "Jornalero";
 		public const string DefaultAge = "18-28";
+        public const string CreateAlert = "http://trigmasolutions.com/Jornalero/api/Jornalero/CreateAlert";
 		public const int ZoomLevel = 13;
 
 		public static byte[] MasterKey { get; set; }

@@ -1,9 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="jornalero.droid">
-	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="16" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="jornalero.droid" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21"/>
 	<!-- These are optional, but recommended. They will allow Maps to use the My Location provider. -->
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.CAMERA" />
 	<application android:allowBackup="true" android:icon="@drawable/truck" android:theme="@style/JornaleroTheme" android:label="Jornalero">
 		<!-- Put your Google Maps V2 API Key here. -->
 		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBPHWpPPqEvgHDmZ7sAC2p4UgcCJpiZ7CA" />

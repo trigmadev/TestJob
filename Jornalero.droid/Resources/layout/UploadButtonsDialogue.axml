@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jornalero="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+    <LinearLayout
+        android:id="@+id/llOverlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/transparent">
+        <LinearLayout
+            android:id="@+id/llBottomPopup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end"
+            android:background="@android:color/transparent">
+            <Button
+                android:id="@+id/btnUploadImage"
+                android:text="Upload"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/cancel1"
+                android:layout_margin="2dp"
+                jornalero:customFont="fonts/SF-UI-Text-Bold.ttf" />
+            <Button
+                android:id="@+id/btnTakeImage"
+                android:text="Take a Photo"
+                android:layout_width="fill_parent"
+                android:gravity="center"
+                android:background="@drawable/cancel1"
+                android:layout_margin="2dp"
+                android:layout_height="wrap_content"
+                jornalero:customFont="fonts/SF-UI-Text-Bold.ttf" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

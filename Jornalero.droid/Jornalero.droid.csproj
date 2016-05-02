@@ -15,7 +15,7 @@
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>Jornalero.droid</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
@@ -50,7 +50,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="GCM.Client">
-      <HintPath>..\Components\GCMClient-1.0\lib\android\GCM.Client.dll</HintPath>
+      <HintPath>..\..\jornalero\Jornalero.droid\bin\Debug\GCM.Client.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>..\packages\Xamarin.Android.Support.v4.23.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
@@ -124,13 +124,16 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
+    <AndroidResource Include="Resources\layout\UploadButtonsDialogue.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\xml\thumb_drawable.xml" />
     <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\layout\Home.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
-    <AndroidResource Include="Resources\values\color.xml" />
+    <AndroidResource Include="Resources\values\color.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\anim\slide_in_left.xml" />
     <AndroidResource Include="Resources\anim\slide_in_right.xml" />
     <AndroidResource Include="Resources\anim\slide_out_left.xml" />
@@ -641,7 +644,9 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\search.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\zoom_in.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\zoom_out.png" />
-    <AndroidResource Include="Resources\layout\CreateAlert.axml" />
+    <AndroidResource Include="Resources\layout\CreateAlert.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\drawable-hdpi\black.png" />
     <AndroidResource Include="Resources\drawable-hdpi\blue.png" />
     <AndroidResource Include="Resources\drawable-hdpi\brown.png" />
@@ -782,19 +787,14 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\slide_unselect.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\white.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\yellow.png" />
-    <AndroidResource Include="Resources\layout\AddVehicle.axml" />
+    <AndroidResource Include="Resources\layout\AddVehicle.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Adapter\" />
-    <Folder Include="Resources\drawable\" />
-    <Folder Include="Resources\drawable-hdpi\" />
-    <Folder Include="Resources\drawable-mdpi\" />
-    <Folder Include="Resources\drawable-xhdpi\" />
-    <Folder Include="Resources\drawable-xxhdpi\" />
-    <Folder Include="Resources\drawable-xxxhdpi\" />
-    <Folder Include="Assets\fonts\" />
-    <Folder Include="Control\" />
-    <Folder Include="LocationService\" />
+    <AndroidResource Include="Resources\drawable-hdpi\list_Selector.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="..\Jornalero.Core\Jornalero.Core.projitems" Label="Shared" Condition="Exists('..\Jornalero.Core\Jornalero.Core.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
@@ -837,5 +837,8 @@
     <AndroidAsset Include="Assets\fonts\SF-UI-Text-Regular.ttf" />
     <AndroidAsset Include="Assets\fonts\SF-UI-Text-Semibold.ttf" />
     <AndroidAsset Include="Assets\fonts\SF-UI-Text-SemiboldItalic.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\cancel1.png" />
   </ItemGroup>
 </Project>

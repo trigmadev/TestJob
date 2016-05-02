@@ -103,4 +103,9 @@
 	<string name="forgot_pwd_msg">We sent an email link to reset your password</string>
 	<string name="signup_msg">Your account has been created! Be sure to complete all the fields. Your work center is</string>
 	<string name="select_center_on_map">SELECT CENTER ON THE MAP</string>
+  <string name="planet_prompt">Choose a planet</string>
+  <string-array name="planets_array">
+    <item>Alaska</item>
+    <item>Alaska2</item>
+  </string-array>
 </resources>

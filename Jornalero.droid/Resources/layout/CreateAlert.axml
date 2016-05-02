@@ -5,33 +5,6 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical">
-    <LinearLayout
-        android:id="@+id/llOverlay"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:background="@android:color/background_dark"
-        android:visibility="gone">
-        <LinearLayout
-            android:id="@+id/llBottomPopup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="end">
-            <Button
-                android:text="Upload"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                jornalero:customFont="fonts/SF-UI-Text-Bold.ttf" />
-            <Button
-                android:text="Take a Photo"
-                android:layout_width="fill_parent"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                jornalero:customFont="fonts/SF-UI-Text-Bold.ttf" />
-        </LinearLayout>
-    </LinearLayout>
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
@@ -55,7 +28,8 @@
                     android:layout_marginBottom="10dp"
                     jornalero:customFont="fonts/SF-UI-Text-Bold.ttf" />
                 <Jornalero.droid.JornaleroEditText
-                    android:text="Type here"
+                    android:id="@+id/caTypeHere"
+                    android:hint="Type here"
                     android:layout_width="fill_parent"
                     android:paddingTop="5dp"
                     android:paddingLeft="5dp"
@@ -67,25 +41,36 @@
                     jornalero:customFont="fonts/SF-UI-Text-Bold.ttf" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/llUploadImage"
+                android:id="@+id/llImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingTop="10dp"
-                android:visibility="gone">
+                android:paddingTop="10dp">
                 <ImageView
-                    android:id="@+id/imgCamera"
+                    android:id="@+id/imgUpload"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/camara" />
+                <Button
+                    android:id="@+id/btnUpload"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_gravity="center"
-                    android:src="@drawable/img" />
+                    android:paddingLeft="10dp"
+                    android:text="@string/upload_picture"
+                    android:background="@color/transparent"
+                    android:textColor="@color/dark_grey" />
                 <LinearLayout
                     android:id="@+id/llButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginLeft="10dp">
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone">
                     <LinearLayout
                         android:id="@+id/llAddButton"
                         android:layout_width="match_parent"
@@ -131,30 +116,6 @@
                             android:layout_marginLeft="10dp" />
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/llImage"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="10dp">
-                <ImageView
-                    android:id="@+id/imgUpload"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_gravity="center"
-                    android:src="@drawable/camara" />
-                <Button
-                    android:id="@+id/btnUpload"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_gravity="center"
-                    android:paddingLeft="10dp"
-                    android:text="@string/upload_picture"
-                    android:background="@color/transparent"
-                    android:textColor="@color/dark_grey" />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/llVehicle"
