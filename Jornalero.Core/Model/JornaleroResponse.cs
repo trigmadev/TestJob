@@ -225,6 +225,15 @@ namespace Jornalero.Core
 
         public bool IsImageChange { get; set; }
 
+        public int DescribeContents()
+        {
+            return 0;
+        }
+
+        public void WriteToParcel(Parcel dest, [GeneratedEnum] ParcelableWriteFlags flags)
+        {
+            
+        }
     }
 
 }
